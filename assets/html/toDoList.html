@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+
+    <link rel="icon" href="../img/favicon.ico">
+    <!-- Library files source : https://cdnjs.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="../js/toDoList.js"></script>
+    <script src="../js/login-signup.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(rgba(192, 206, 234, 0.8), rgba(192, 206, 234, 0.8)), url(../img/clouds_2.jpg) no-repeat center center fixed;
+            margin: 0;
+            min-width: 250px;
+        }
+        .container {
+            width: 80%;
+            height: auto;
+        }
+        .alert {
+            cursor: pointer;
+        }
+        .foot {
+            position: fixed;
+            left: 10%;
+            bottom: 0;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<!--- Log out --->
+<div class="text-right">
+    <input class="btn btn-success" type="submit" id="btnLogout"  value="Logout" />
+</div>
+
+<!--on logout button click-->
+<script>
+    $(document).ready(function(){
+        $('#btnLogout').on('click', function(e){
+            if(confirm("Are you sure you want to logout?"))
+                window.location.href = "../../index.html";
+            return false;
+        });
+    });
+</script>
+
+<center>
+    <div class="foot">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4">
+                <!-- Input for tasks -->
+                <div class="input-group">
+                    <!-- Datepicker as text field -->
+                    <div class='input-group date' id='datetimepicker5'>
+                        <input type='text' class="form-control" id="txtDate" placeholder="date-time"/>
+                        <span class="input-group-addon" >
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <!-- Input for tasks -->
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Add Task" id="txtTask">
+                    <div class="input-group-btn">
+                        <button class="btn btn-success" id="btnAdd"> <i class="glyphicon glyphicon-plus"></i> </button>
+                    </div>
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h2 class="text text-success"><span id="headerTitle"></span></h2>
+    <br>
+
+    <div class="container">
+        <!--display area-->
+    </div>
+
+</center>
+</body>
+</html>

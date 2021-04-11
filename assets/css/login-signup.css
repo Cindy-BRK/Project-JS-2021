@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient(rgba(192, 206, 234, 0.8), rgba(192, 206, 234, 0.8)), url(../img/clouds_1.jpg) no-repeat center center fixed;
+    background-size: cover
+}
+
+.card {
+    width: 400px;
+    border: none;
+    /*opacity: 0.75;*/
+}
+
+.btr {
+    border-top-right-radius: 5px !important
+}
+
+.btl {
+    border-top-left-radius: 5px !important
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd
+}
+
+.btn-dark:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd
+}
+
+.nav-pills {
+    display: table !important;
+    width: 100%
+}
+
+.nav-pills .nav-link {
+    border-radius: 0px;
+    border-bottom: 1px solid #0d6efd40
+}
+
+.nav-item {
+    display: table-cell;
+    background: #0d6efd2e
+}
+
+.form {
+    padding: 10px;
+    height: 300px
+}
+
+.form input {
+    margin-bottom: 12px;
+    border-radius: 3px
+}
+
+.form input:focus {
+    box-shadow: none
+}
+
+.form button {
+    margin-top: 20px
+}
+
+
+
